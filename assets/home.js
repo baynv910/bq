@@ -28,9 +28,15 @@ var x = setInterval(function() {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop < 250 || document.documentElement.scrollTop < 250) {
-    document.querySelector('#text').style.opacity = (300 - document.documentElement.scrollTop)/100;
+  let opacity_var = (300 - document.documentElement.scrollTop)/300;
+  opacity_var = (opacity_var > 0)? opacity_var: 0;
+  if (document.body.scrollTop < 150 || document.documentElement.scrollTop < 150) {
+    document.querySelector('#text').style.opacity = opacity_var;
   } else {
-    document.querySelector('#text').style.opacity = 0;
+    document.querySelector('#text').style.display = 'none';
   }
 }
+
+$('.carousel').carousel({
+  interval: 2000
+})
