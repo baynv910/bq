@@ -51,18 +51,7 @@
     text-align: center;
     padding: 5px;
   }
-  .our-name .heart {
-    animation: zoom-animate 0.5s infinite alternate-reverse;
-  }
-
-  ._heart_between {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 1150px;
-    left: 50%;
-    z-index: 2;
-    animation: opacity-animate 0.5s infinite alternate;
-  }
+  
 
   @keyframes zoom-animate {
     0% {transform: scale(0.8); opacity: 0.1;}
@@ -89,9 +78,29 @@
   font-size: 38px;
 }
 
+
+.our-name .heart {
+  animation: zoom-animate 0.5s infinite alternate-reverse;
+}
+
+._heart_between {
+  position: absolute;
+  left: 50%;
+  
+  margin-top: 5vw;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: opacity-animate 0.5s infinite alternate;
+}
+._heart_between img {
+  width: 150px;
+  transition: all 1s ease;
+}
+
+
 @media only screen and (max-width:479px) {
-  ._heart_between {
-    top: 980px !important;
+  ._heart_between img {
+    transform: scale(0.7);
   }
 
   ._our_name {
