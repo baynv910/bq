@@ -38,5 +38,5 @@ function scrollFunction() {
 }
 
 $('.carousel').carousel({
-  interval: 2000
+  interval: 500
 })
